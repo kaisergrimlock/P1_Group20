@@ -163,9 +163,15 @@ public class Main {
                     month = bonus + dates[0];
                     finalDate = month + "/" + dates[1] + "/" + dates[2];
                 }
-
+                
+                long[] token = {0, 0, 0, 0};
+                for (int i = 4; i < array.length; i++)
+                {
+                    token[i-4] = getLong(array[i]);
+                }
+                
                 // Create object data
-                Data d = new Data(array[0], array[1], array[2], LocalDate.parse(finalDate, df), getLong(array[4]), getLong(array[5]), getLong(array[6]), getLong(array[7]));
+                Data d = new Data(array[0], array[1], array[2], LocalDate.parse(finalDate, df), token[0], token[1], token[2], token[3]);
                 line = reader1.readLine();
 
                 if (input == 1) {
