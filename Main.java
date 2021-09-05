@@ -139,6 +139,7 @@ public class Main {
             // Open File to Read
             FileReader reader = new FileReader("covid-data.csv");
             BufferedReader reader1 = new BufferedReader(reader);
+            reader1.readLine();
             String line;
             line = reader1.readLine();
 
