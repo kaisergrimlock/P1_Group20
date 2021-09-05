@@ -589,8 +589,10 @@ class Summary {
             // Total vaccinated
             if (userInputMetric == 3) {
                 // Read the value of the last date
-                answer = list.get(smallGroupSize - 1).getVaccinated();
-                upToAnswer[i] = answer;
+                for (int j = 0; j < grouping.get(i).get(smallGroupSize - 1); j++) {
+                    answer = list.get(grouping.get(i).get(smallGroupSize - 1) - 1).getVaccinated();
+                    upToAnswer[i] = answer;
+                }
             }
         }
 
